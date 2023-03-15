@@ -7,7 +7,7 @@
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
-<body>
-
+<body class="">
+    <h1>DevJobs</h1>
 </body>
 </html>
