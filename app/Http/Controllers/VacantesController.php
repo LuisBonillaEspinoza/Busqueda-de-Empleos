@@ -11,7 +11,7 @@ class VacantesController extends Controller
      */
     public function index()
     {
-        //
+        return view('vacantes.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class VacantesController extends Controller
      */
     public function create()
     {
-        //
+        return view('vacantes.create');
     }
 
     /**
@@ -27,7 +27,7 @@ class VacantesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
