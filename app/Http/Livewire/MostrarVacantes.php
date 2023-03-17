@@ -2,12 +2,19 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Vacante;
 use Livewire\Component;
 
 class MostrarVacantes extends Component
 {
     public function render()
     {
-        return view('livewire.mostrar-vacantes');
+        $vacantes = Vacante::where('user_id',auth()->user()->id)->paginate(2);
+        
+        $params = [
+            'vacantes' => $vacantes,
+        ];
+
+        return view('livewire.mostrar-vacantes',$params);
     }
 }
