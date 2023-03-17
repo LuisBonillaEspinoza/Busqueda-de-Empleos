@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vacantes',[VacantesController::class,'index'])->middleware(['auth', 'verified'])->name('vacantes.index');
-Route::get('/vacantes/create',[VacantesController::class,'create'])->middleware(['auth', 'verified'])->name('vacantes.create');
+Route::get('/vacante',[VacantesController::class,'index'])->middleware(['auth', 'verified'])->name('vacantes.index');
+Route::get('/vacante/create',[VacantesController::class,'create'])->middleware(['auth', 'verified'])->name('vacantes.create');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

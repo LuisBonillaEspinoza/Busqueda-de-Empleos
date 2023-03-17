@@ -29,7 +29,7 @@
         <select id="categoria" 
             class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm w-full"
             type="select"
-            wire:model="scategoria">
+            wire:model="categoria">
                 <option value="">Seleccione una Categoria</option>
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria->id }}">{{ $categoria->categoria }}</option>
@@ -66,7 +66,16 @@
 
     <div>
         <x-input-label for="imagen" :value="__('Imagen')" />
-        <x-text-input id="imagen" class="block mt-1 w-full" type="file" wire:model="imagen"  autocomplete="username" />
+        <x-text-input id="imagen" class="block mt-1 w-full" type="file" wire:model="imagen"  autocomplete="username" accept="image/*"/>
+        
+        {{-- Mostrar una Preview de la Imagen --}}
+        <div class="my-5">
+            @if($imagen)
+                Imagen:
+                <img src="{{ $imagen->temporaryUrl() }}" alt="">
+            @endif
+        </div>
+        
         @error('imagen')
             @livewire('mostrar-alerta', ['mensaje' => $message])
         @enderror
