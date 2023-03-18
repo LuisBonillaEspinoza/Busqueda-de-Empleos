@@ -13,7 +13,7 @@
                 <a href="" class="bg-green-200 py-2 px-4 rounded-lg text-red-400 text-xs font-bold uppercase text-center">
                     Candidatos
                 </a>
-                <a href="" class="bg-blue-300 py-2 px-4 rounded-lg text-red-400 text-xs font-bold uppercase text-center">
+                <a href="{{ route('vacantes.edit',$vacante) }}" class="bg-blue-300 py-2 px-4 rounded-lg text-red-400 text-xs font-bold uppercase text-center">
                     Editar
                 </a>
                 <a href="" class="bg-red-400 py-2 px-4 rounded-lg text-white text-xs font-bold uppercase text-center">
