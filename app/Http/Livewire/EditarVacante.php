@@ -5,7 +5,6 @@ namespace App\Http\Livewire;
 use App\Models\Categoria;
 use App\Models\Salario;
 use App\Models\Vacante;
-use Illuminate\Support\Facades\File;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
