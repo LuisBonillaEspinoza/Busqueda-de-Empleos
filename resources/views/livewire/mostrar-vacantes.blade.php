@@ -3,7 +3,7 @@
         @foreach ($vacantes as $vacante)
         <div class="p-6 text-gray-900 dark:text-gray-100 md:flex md:justify-between md:items-center">
             <div class="space-y-2">
-                <a href="" class="text-xl font-bold">{{ $vacante->titulo }}</a>
+                <a href="{{ route('vacantes.show',$vacante) }}" class="text-xl font-bold">{{ $vacante->titulo }}</a>
                 <p class="text-sm text-gray-600 font-bold">{{ $vacante->empresa }}</p>
                 {{-- Modificar para obtener un formato de fecha --}}
                 <p class="text-sm text-gray-500">Ultimo dia : {{ Carbon\Carbon::parse( $vacante->ultimo_dia)->format('d/m/Y') }}</p>
