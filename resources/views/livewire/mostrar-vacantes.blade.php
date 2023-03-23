@@ -19,7 +19,7 @@
                 <button
 {{-- Wire Click llama a un evento en el componente --}}
                 wire:click='$emit("mostrar_alerta",{{ $vacante->id }})' class="bg-red-400 py-2 px-4 rounded-lg text-white text-xs font-bold uppercase text-center">
-                    Eliminar
+                    Eliminar    
                 </button>
             </div>
 

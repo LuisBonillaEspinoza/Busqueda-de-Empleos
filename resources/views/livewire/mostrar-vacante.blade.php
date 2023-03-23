@@ -41,4 +41,16 @@
             <p>{{ $vacante->descripcion }}</p>
         </div>
     </div>
+    
+    @guest
+        <div class="mt-5 bg-gray-50 border border-dashed text-center">
+            <p>
+                ¿Deseas Postular a esta vacante? <a class="font-bold text-indigo-600" href="{{ route('register') }}">Obten una cuenta y aplica a esta y muchas vacantes</a>
+            </p>
+        </div>
+    @endguest
+ 
+    @cannot('create',App\Models\Vacante::class)
+        @livewire('postular-vacante')
+    @endcannot
 </div>
